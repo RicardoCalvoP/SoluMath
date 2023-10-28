@@ -17,7 +17,7 @@ body {
 
 main {
     width: 100%;
-    padding: 20px;
+    padding: 10%;
     margin: auto;
     margin-top: 100px;
 }
@@ -74,8 +74,92 @@ main {
 /* FORMULARIOS */
 
 .contenedor_login-registro {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 15px;
+}
+
+.contenedor_login-registro form {
     width: 100%;
     padding: 80px 20px;
     background: white;
     position: absolute;
+    border-radius: 20px;
+
+}
+
+.contenedor_login-registro form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkgray;
+}
+
+.contenedor_login-registro form input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 15px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.contenedor_login-registro form button {
+    padding: 10px 20px;
+
+    margin-top: 40px;
+    border: none;
+    font-size: 12px;
+    background: lightgray;
+    color: white;
+    cursor: pointer;
+    outline: none;
+
+}
+
+.formulario_iniciar_sesion {
+    opacity: 1;
+    display: block;
+}
+
+.formulario_registro {
+    display: none;
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media screen and (max-width: 850px) {
+    main {
+        margin-top: 50px;
+    }
+
+    .caja_trasera {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja_trasera div {
+        margin: 0px;
+        position: absolute;
+    }
+
+    /* FORMULARIO */
+
+    .contenedor_login-registro {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor_login-registro form {
+        position: relative;
+    }
 }
