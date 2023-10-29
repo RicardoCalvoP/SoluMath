@@ -6,17 +6,43 @@
     $apellido = $_POST['apellido'];
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
+    $telefono = $_POST['telefono'];
 
-    if($nombre== NULL || $apellido== NULL || $usuario== NULL || $contrasena== NULL){
+
+    //VERIFICAR USUARIO UNICO
+    $verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$usuario'");
+    $verificar_telefono = mysqli_query($conexion, "SELECT * FROM usuarios WHERE telefono = '$telefono'");
+    
+    if($nombre== NULL || $apellido== NULL || $usuario== NULL || $contrasena== NULL || $telefono== NULL){
         echo'
         <script>
-        alert("Hubo un error, intentelo de nuevo");
+        alert("Es necesario llenar todas las casillas");
         window.location = "../index.php"; 
         </script>
         ';
+        exit();
+        
     }
     else {
-    $query = "INSERT INTO usuarios(nombre, apellido, usuario, contrasena) VALUES('$nombre', '$apellido', '$usuario', '$contrasena')";
+        if(mysqli_num_rows($verificar_usuario) > 0){
+            echo'
+            <script>
+            alert("Ese usuario ya esta en uso");
+            window.location = "../index.php"; 
+            </script>
+            ';
+            exit();
+        }
+        if(mysqli_num_rows($verificar_telefono) > 0){
+            echo'
+            <script>
+            alert("Ese telefono ya esta registrado");
+            window.location = "../index.php"; 
+            </script>
+            ';
+            exit();
+        }
+    $query = "INSERT INTO usuarios(nombre, apellido, usuario, contrasena, telefono) VALUES('$nombre', '$apellido', '$usuario', '$contrasena', '$telefono')";
 
     $ejecutar = mysqli_query($conexion, $query);
     echo '
