@@ -29,17 +29,18 @@
                 <!-- INICIAR SESIÓN -->
                 <form action="" class="formulario_iniciar_sesion">
                     <h2>Inicia Sesión</h2>
-                    <input type="text" placeholder="Usuario">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="text" placeholder="Usuario" name="usuario" required >
+                    <input type="password" placeholder="Contraseña" name="contrasena" required>
                     <button>Confirmar</button>
                 </form>
                 <!-- REGISTRO -->
                 <form action="php/registro_usuario_be.php" method="POST" class="formulario_registro">
                     <h2>Regístrate</h2>
-                    <input type="text" placeholder="Nombre" name="nombre">
-                    <input type="text" placeholder="Apellido" name="apellido">
-                    <input type="text" placeholder="Usuario" name="usuario">
-                    <input type="password" placeholder="Contraseña" name="contrasena">
+                    <input type="text" placeholder="Nombre" name="nombre" required>
+                    <input type="text" placeholder="Apellido" name="apellido" required>
+                    <input type="tel" placeholder="Teléfono" name="telefono" minlength = "8" required>
+                    <input type="text" placeholder="Usuario" name="usuario" required>
+                    <input type="password" placeholder="Contraseña" name="contrasena" required>
                     <button>Confirmar</button>
                 </form>
                 <!-- TERMINA FORMULARIO -->
