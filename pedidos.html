@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="assets/CSS/estilos_pedidos.css">
+</head>
+
+<body>
+    <main>
+        <div class="contenedor_principal">
+            <div class="contenedor_secundario">
+                <div class="contenedor_progreso">
+                    <button id="boton_progreso">P</button>
+                </div>
+                <div class="contenedor_actividades">
+                    <button id="boton_actividades">A</button>
+                </div>
+                <div class="contenedor_extras">
+                    <button id="boton_extras">E</button>
+                </div>
+            </div>
+            <!-- FORMULARIOS PARA RESERVAR -->
+            <div class="contenedor_reservas">
+                <!-- PROGRESO -->
+                <form action="" class="formulario_progreso">
+                    <h2>Progreso</h2>
+                    <input type="text" placeholder="Usuario" required>
+                    <input type="text" placeholder="Contrasena" required>
+                    <input type="text" placeholder="Numero de ejercicios" required>
+                    <input type="text" placeholder="Referencia">
+                    <div class="boton">
+                        <button>Confirmar</button>
+                    </div>
+                </form>
+                <form action="" class="formulario_actividades">
+                    <h2>Actividades</h2>
+                    <input type="text" placeholder="Usuario" required>
+                    <input type="text" placeholder="Contrasena" required>
+                    <input type="text" placeholder="Nombre de la Actividad" required>
+                    <input type="text" placeholder="Referencia">
+                    <div class="boton">
+                        <button>Confirmar</button>
+                    </div>
+                </form>
+                <form action="" class="formulario_extras">
+                    <h2>Extras</h2>
+                    <p>Para solicitar actividades extra es necesario mandar mensaje
+                        al responsable.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
