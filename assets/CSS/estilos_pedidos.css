@@ -34,35 +34,54 @@ main {
     display: flex;
     background-color: transparent;
     justify-content: space-around;
+    margin-bottom: 0px;
     /*background-color: rgba(60, 66, 71, 0.5); */
 
 }
 
+.contenedor_progreso {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: gray;
+}
+
+.contenedor_actividades {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: gray;
+
+}
+
+.contenedor_extras {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: gray;
+}
+
 .contenedor_secundario button {
-    padding: 10px 20px;
+    padding: 10px 24.5px;
+    color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     height: 45px;
     background: transparent;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    border-radius: 15px;
     border: none;
-    background: white;
-    color: gray;
     outline: none;
     transition: all 300ms;
 }
 
 .contenedor_secundario button:hover {
-    background: lightgray;
-    color: white;
+    background: white;
+    color: gray;
 }
 
 /* Estilos para los formularios */
 .contenedor_reservas {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
 }
 
 form {
@@ -73,7 +92,7 @@ form {
     width: 100%;
     padding: 20px;
     background: white;
-    border-radius: 20px;
+    border-end-end-radius: 20px;
 }
 
 /* Resto de estilos sin cambios */
