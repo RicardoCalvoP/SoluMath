@@ -27,9 +27,9 @@
             <!-- FORMULARIO PARA REGISTRARSE O INICIAR SESIÓN -->
             <div class="contenedor_login_registro">
                 <!-- INICIAR SESIÓN -->
-                <form action="" class="formulario_iniciar_sesion">
+                <form action="php/login_usuario_be.php" method="POST" class="formulario_iniciar_sesion">
                     <h2>Inicia Sesión</h2>
-                    <input type="text" placeholder="Usuario" name="usuario" required >
+                    <input type="text" placeholder="Usuario" name="usuario" required>
                     <input type="password" placeholder="Contraseña" name="contrasena" required>
                     <button>Confirmar</button>
                 </form>

@@ -4,8 +4,8 @@
 
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
-    $usuario = $_POST['usuario'];
-    $contrasena = $_POST['contrasena'];
+    $usuario = trim($_POST['usuario']);
+    $contrasena = trim($_POST['contrasena']);
     $telefono = $_POST['telefono'];
 
 
@@ -47,7 +47,7 @@
     $ejecutar = mysqli_query($conexion, $query);
     echo '
         <script>
-        window.location = "../index.php"; 
+        window.location = "../pedidos.html"; 
         </script>
         ';
         //Cambiar window location a la pagina de registro
